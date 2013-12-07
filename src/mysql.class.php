@@ -1,4 +1,28 @@
 <?php
+	/**
+	 *  PHP_MYSQL_CLASS
+	 *  
+	 *  @Author: 	Mutinda Boniface
+	 *  @Email: 	boniface.info@gmail.com
+	 *  @Website: 	http://mutinda.rebmos.net
+	 *  
+	 *  @Facebook:  https://www.facebook.com/mutinda.boniface
+	 *  @Twitter:   https://twitter.com/webgeeker
+	 *  @Google+:   https://plus.google.com/+MutindaBoniface/posts
+	 *  
+	 *  A php class to allow you to create a connection to mysql database and run queries with ease 
+	 *  
+	 *  At a glance - The core methods :
+	 *  	1. Create a connection using ->connect method 
+	 *  	2. Run select queries using ->querySelect method
+	 *  	3. Run delete queries using ->queryDelete method
+	 *  	4. Run update queries using ->queryUpdate method
+	 *  
+	 *  --- check the documentation and tests files for more methods usage -----------------
+	 *  
+	 *  DISCLAIMER: This class is free to use in any sort of project from open source to commercial ones 
+	 *  LICENCE: Its free to use and modify so long as the accreditation part provided at the top is left intact. 
+	 */
 
 	interface ArrayHelper{
 		public static function  isArray( $value );
