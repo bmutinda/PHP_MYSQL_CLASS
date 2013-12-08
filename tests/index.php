@@ -111,4 +111,23 @@
 	
 	// with context 
 	$resource = $sql->queryInsert( USERS_TABLE, array("first_name"=>"Mutinda", "middle_name"=>'Daudi', "last_name"=>'Boniface', "gender"=>'male'), "REPLACE");
+	
+	
+	// --------------------------------------------------------------------------------------------------------------------------------------
+	// CUSTOM CREATED QUERY
+	// 
+	// @method -> execute($query));
+	// @param -> query[string] - the sql query to execute  
+	// @return ->resource - query resource object 
+	
+	$query = "SELECT * FROM ".USERS_TABLE." WHERE status = 1 ";
+	$resource = $sql->execute( $query );	
+	echo $sql->queryNumRows($resource);
+	
+	
+	/**
+	 *  Happy coding... report any bug and feel free to contribute to the project 
+	 *  
+	 */
+	
 ?>
