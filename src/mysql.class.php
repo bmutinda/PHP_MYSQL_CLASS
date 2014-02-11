@@ -270,7 +270,8 @@
 				$sql_query = " UPDATE {$table} SET ";
 				
 				for( $i=0; $i< $what_key_count; $i++){
-					$sql_query.="`{$what_keys[$i]}` = '{$what_values[$i]}'".",";				
+					$_value = mysql_real_escape_string( $what_values[$i] );
+					$sql_query.="`{$what_keys[$i]}` = '{$_value}'".",";				
 				}
 				$sql_query = substr( $sql_query, 0, -1);
 				
