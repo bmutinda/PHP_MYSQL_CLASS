@@ -207,7 +207,7 @@
 		 * @param <array> $what the attributes to extract from the table
 		 * @param <array> $condition array of query filter conditions..
 		 */
-		public function querySelect( $table, $what = array(), $condition = array(), $orderByClause = null ){
+		public function querySelect( $table, $what = array(), $condition = array(), $orderByClause = null, $limit = null ){
 			$continue = false;
 			
 			$continue = isset($table) and $table!="" ?  true: false;
@@ -244,6 +244,10 @@
 				
 				if( ! empty( $orderByClause )){
 					$sql_query.=" ".$orderByClause;
+				}
+
+				if( ! empty( $limit )){
+					$sql_query.=" LIMIT ".$limit;
 				}
 				
 				return $this->execute( $sql_query );
